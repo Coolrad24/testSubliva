@@ -1,0 +1,673 @@
+[debug] [2024-11-13T18:59:33.898Z] ----------------------------------------------------------------------
+[debug] [2024-11-13T18:59:33.900Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
+[debug] [2024-11-13T18:59:33.900Z] CLI Version:   13.25.0
+[debug] [2024-11-13T18:59:33.900Z] Platform:      win32
+[debug] [2024-11-13T18:59:33.900Z] Node Version:  v18.20.4
+[debug] [2024-11-13T18:59:33.901Z] Time:          Wed Nov 13 2024 12:59:33 GMT-0600 (Central Standard Time)
+[debug] [2024-11-13T18:59:33.901Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-13T18:59:33.958Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-13T18:59:33.959Z] > authorizing via signed-in user (ghazijichi@subliva.com)
+[debug] [2024-11-13T18:59:33.959Z] [iam] checking project subliva-d49ad for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2024-11-13T18:59:33.960Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:33.960Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:33.961Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/subliva-d49ad:testIamPermissions [none]
+[debug] [2024-11-13T18:59:33.961Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/subliva-d49ad:testIamPermissions x-goog-quota-user=projects/subliva-d49ad
+[debug] [2024-11-13T18:59:33.962Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/subliva-d49ad:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-11-13T18:59:34.193Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/subliva-d49ad:testIamPermissions 200
+[debug] [2024-11-13T18:59:34.193Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/subliva-d49ad:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-11-13T18:59:34.194Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:34.194Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:34.194Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/subliva-d49ad/serviceAccounts/subliva-d49ad@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2024-11-13T18:59:34.194Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/subliva-d49ad/serviceAccounts/subliva-d49ad@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-11-13T18:59:34.359Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/subliva-d49ad/serviceAccounts/subliva-d49ad@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2024-11-13T18:59:34.359Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/subliva-d49ad/serviceAccounts/subliva-d49ad@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'subliva-d49ad'...
+[info] 
+[info] i  deploying functions 
+[debug] [2024-11-13T18:59:34.367Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:34.367Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:34.368Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/subliva-d49ad [none]
+[debug] [2024-11-13T18:59:34.525Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/subliva-d49ad 200
+[debug] [2024-11-13T18:59:34.526Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/subliva-d49ad {"projectId":"subliva-d49ad","projectNumber":"492294811440","displayName":"Subliva","name":"projects/subliva-d49ad","resources":{"hostingSite":"subliva-d49ad"},"state":"ACTIVE","etag":"1_ea8abbf4-2c43-4c9b-9470-638a474dc6b2"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[debug] [2024-11-13T18:59:34.531Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:34.531Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:34.531Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:34.531Z] Checked if tokens are valid: true, expires at: 1731527928293
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2024-11-13T18:59:34.533Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:34.533Z] Checked if tokens are valid: true, expires at: 1731527928293
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2024-11-13T18:59:34.535Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:34.535Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:34.536Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-11-13T18:59:34.536Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/subliva-d49ad
+[debug] [2024-11-13T18:59:34.540Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-11-13T18:59:34.540Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/subliva-d49ad
+[debug] [2024-11-13T18:59:34.542Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/cloudbuild.googleapis.com [none]
+[debug] [2024-11-13T18:59:34.542Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/cloudbuild.googleapis.com x-goog-quota-user=projects/subliva-d49ad
+[debug] [2024-11-13T18:59:34.544Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/artifactregistry.googleapis.com [none]
+[debug] [2024-11-13T18:59:34.544Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/artifactregistry.googleapis.com x-goog-quota-user=projects/subliva-d49ad
+[debug] [2024-11-13T18:59:35.011Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/cloudbuild.googleapis.com 200
+[debug] [2024-11-13T18:59:35.011Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2024-11-13T18:59:35.013Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/artifactregistry.googleapis.com 200
+[debug] [2024-11-13T18:59:35.013Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2024-11-13T18:59:35.014Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/runtimeconfig.googleapis.com 200
+[debug] [2024-11-13T18:59:35.014Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-11-13T18:59:35.015Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/cloudfunctions.googleapis.com 200
+[debug] [2024-11-13T18:59:35.015Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2024-11-13T18:59:35.016Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:35.016Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:35.016Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/subliva-d49ad/adminSdkConfig [none]
+[debug] [2024-11-13T18:59:35.179Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/subliva-d49ad/adminSdkConfig 200
+[debug] [2024-11-13T18:59:35.179Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/subliva-d49ad/adminSdkConfig {"projectId":"subliva-d49ad","storageBucket":"subliva-d49ad.firebasestorage.app"}
+[debug] [2024-11-13T18:59:35.180Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:35.180Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:35.180Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/subliva-d49ad/configs [none]
+[debug] [2024-11-13T18:59:35.328Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/subliva-d49ad/configs 200
+[debug] [2024-11-13T18:59:35.329Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/subliva-d49ad/configs {"configs":[{"name":"projects/subliva-d49ad/configs/gmail"}]}
+[debug] [2024-11-13T18:59:35.329Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:35.330Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:35.330Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/subliva-d49ad/configs/gmail/variables [none]
+[debug] [2024-11-13T18:59:35.478Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/subliva-d49ad/configs/gmail/variables 200
+[debug] [2024-11-13T18:59:35.478Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/subliva-d49ad/configs/gmail/variables {"variables":[{"name":"projects/subliva-d49ad/configs/gmail/variables/password","updateTime":"2024-11-12T19:40:33.946672351Z"},{"name":"projects/subliva-d49ad/configs/gmail/variables/email","updateTime":"2024-11-12T19:40:32.962282626Z"}]}
+[debug] [2024-11-13T18:59:35.479Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:35.479Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:35.479Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:35.479Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:35.479Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/subliva-d49ad/configs/gmail/variables/password [none]
+[debug] [2024-11-13T18:59:35.484Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/subliva-d49ad/configs/gmail/variables/email [none]
+[debug] [2024-11-13T18:59:35.604Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/subliva-d49ad/configs/gmail/variables/email 200
+[debug] [2024-11-13T18:59:35.604Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/subliva-d49ad/configs/gmail/variables/email {"name":"projects/subliva-d49ad/configs/gmail/variables/email","updateTime":"2024-11-12T19:40:32.962282626Z","text":"support@subliva.com"}
+[debug] [2024-11-13T18:59:35.606Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/subliva-d49ad/configs/gmail/variables/password 200
+[debug] [2024-11-13T18:59:35.607Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/subliva-d49ad/configs/gmail/variables/password {"name":"projects/subliva-d49ad/configs/gmail/variables/password","updateTime":"2024-11-12T19:40:33.946672351Z","text":"Subaru247$"}
+[debug] [2024-11-13T18:59:35.610Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2024-11-13T18:59:36.428Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^4.4.1",
+    "nodemailer": "^6.9.16"
+  },
+  "private": true
+}
+[debug] [2024-11-13T18:59:36.428Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[info] i  functions: You are using a version of firebase-functions SDK (4.9.0) that does not have support for the newest Firebase Extensions features. Please update firebase-functions SDK to >=5.1.0 to use them correctly 
+[debug] [2024-11-13T18:59:36.430Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-11-13T18:59:36.437Z] Found firebase-functions binary at 'C:\Users\suley\Documents\SublivaWebsite\subliva\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8195
+
+[debug] [2024-11-13T18:59:36.829Z] Got response from /__/functions.yaml {"endpoints":{"sendLeaseStatusEmail":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"sendLeaseStatusEmail"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged C:\Users\suley\Documents\SublivaWebsite\subliva\functions (54.45 KB) for uploading 
+[debug] [2024-11-13T18:59:36.890Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:36.890Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:36.890Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/subliva-d49ad/locations/-/functions [none]
+[debug] [2024-11-13T18:59:37.365Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/subliva-d49ad/locations/-/functions 200
+[debug] [2024-11-13T18:59:37.366Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/subliva-d49ad/locations/-/functions {}
+[debug] [2024-11-13T18:59:37.366Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:37.366Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:37.368Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2024-11-13T18:59:37.773Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/-/functions 200
+[debug] [2024-11-13T18:59:37.773Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/-/functions {}
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[debug] [2024-11-13T18:59:37.778Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:37.778Z] Checked if tokens are valid: true, expires at: 1731527928293
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[debug] [2024-11-13T18:59:37.780Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:37.780Z] Checked if tokens are valid: true, expires at: 1731527928293
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[debug] [2024-11-13T18:59:37.781Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:37.781Z] Checked if tokens are valid: true, expires at: 1731527928293
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2024-11-13T18:59:37.783Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:37.783Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:37.783Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/run.googleapis.com [none]
+[debug] [2024-11-13T18:59:37.783Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/run.googleapis.com x-goog-quota-user=projects/subliva-d49ad
+[debug] [2024-11-13T18:59:37.786Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/eventarc.googleapis.com [none]
+[debug] [2024-11-13T18:59:37.786Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/eventarc.googleapis.com x-goog-quota-user=projects/subliva-d49ad
+[debug] [2024-11-13T18:59:37.789Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/pubsub.googleapis.com [none]
+[debug] [2024-11-13T18:59:37.789Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/pubsub.googleapis.com x-goog-quota-user=projects/subliva-d49ad
+[debug] [2024-11-13T18:59:37.791Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/storage.googleapis.com [none]
+[debug] [2024-11-13T18:59:37.791Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/storage.googleapis.com x-goog-quota-user=projects/subliva-d49ad
+[debug] [2024-11-13T18:59:38.032Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/eventarc.googleapis.com 200
+[debug] [2024-11-13T18:59:38.032Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/eventarc.googleapis.com [omitted]
+[info] +  functions: required API eventarc.googleapis.com is enabled 
+[debug] [2024-11-13T18:59:38.035Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/storage.googleapis.com 200
+[debug] [2024-11-13T18:59:38.035Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/storage.googleapis.com [omitted]
+[info] +  functions: required API storage.googleapis.com is enabled 
+[debug] [2024-11-13T18:59:38.038Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/pubsub.googleapis.com 200
+[debug] [2024-11-13T18:59:38.038Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/pubsub.googleapis.com [omitted]
+[info] +  functions: required API pubsub.googleapis.com is enabled 
+[debug] [2024-11-13T18:59:38.045Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/run.googleapis.com 200
+[debug] [2024-11-13T18:59:38.046Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/run.googleapis.com [omitted]
+[info] +  functions: required API run.googleapis.com is enabled 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[debug] [2024-11-13T18:59:38.048Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:38.048Z] Checked if tokens are valid: true, expires at: 1731527928293
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2024-11-13T18:59:38.049Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:38.049Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:38.049Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/492294811440/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2024-11-13T18:59:38.051Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/492294811440/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2024-11-13T18:59:38.416Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/492294811440/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2024-11-13T18:59:38.416Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/492294811440/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-492294811440@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"111059423530882781351"}}
+[debug] [2024-11-13T18:59:38.582Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/492294811440/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2024-11-13T18:59:38.582Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/492294811440/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-492294811440@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"105593096823154127188"}}
+[debug] [2024-11-13T18:59:38.586Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:38.586Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:38.587Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/subliva-d49ad [none]
+[debug] [2024-11-13T18:59:38.705Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/subliva-d49ad 200
+[debug] [2024-11-13T18:59:38.705Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/subliva-d49ad {"projectId":"subliva-d49ad","projectNumber":"492294811440","displayName":"Subliva","name":"projects/subliva-d49ad","resources":{"hostingSite":"subliva-d49ad"},"state":"ACTIVE","etag":"1_ea8abbf4-2c43-4c9b-9470-638a474dc6b2"}
+[debug] [2024-11-13T18:59:38.708Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:38.708Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:38.708Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2024-11-13T18:59:38.883Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2024-11-13T18:59:38.883Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-492294811440-us-central1/72492431-4d05-463f-be85-b2504d83010c.zip?GoogleAccessId=service-492294811440@gcf-admin-robot.iam.gserviceaccount.com&Expires=1731526178&Signature=2j71fpqzIgzOTcZxUTO%2Fld43kLy5Uk6AVwg3cKBtWo0iJM26CS%2F3Hb8hXAk%2FpNVQ9HabTIPAx3trFLl6qFv2ukrIObOfC53xxxYvoSTuz1Xs8Nmv469Yg3khtma1MgdYIFGAicl7oeoKPTDNEzYwlN%2FJnLQqysVeK%2BiItElkWISIcVRkm%2FqqSysuMFm4Yi6GpOcCB4YECYn6MSGAn0HZYkH96gY8RnVJxODecgywMnq6hhu930yt5sSbCtRhh3RurQ3oWUaVhhWOfaZfUSgpW5uHro7DlubTBJ9frI0ikW6qjT19uevrg06xMPDjp75dz992ekUR8Oruo4xGWS5a5A%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-492294811440-us-central1","object":"72492431-4d05-463f-be85-b2504d83010c.zip"}}
+[debug] [2024-11-13T18:59:38.884Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-492294811440-us-central1/72492431-4d05-463f-be85-b2504d83010c.zip GoogleAccessId=service-492294811440%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1731526178&Signature=2j71fpqzIgzOTcZxUTO%2Fld43kLy5Uk6AVwg3cKBtWo0iJM26CS%2F3Hb8hXAk%2FpNVQ9HabTIPAx3trFLl6qFv2ukrIObOfC53xxxYvoSTuz1Xs8Nmv469Yg3khtma1MgdYIFGAicl7oeoKPTDNEzYwlN%2FJnLQqysVeK%2BiItElkWISIcVRkm%2FqqSysuMFm4Yi6GpOcCB4YECYn6MSGAn0HZYkH96gY8RnVJxODecgywMnq6hhu930yt5sSbCtRhh3RurQ3oWUaVhhWOfaZfUSgpW5uHro7DlubTBJ9frI0ikW6qjT19uevrg06xMPDjp75dz992ekUR8Oruo4xGWS5a5A%3D%3D
+[debug] [2024-11-13T18:59:38.884Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-492294811440-us-central1/72492431-4d05-463f-be85-b2504d83010c.zip [stream]
+[debug] [2024-11-13T18:59:39.080Z] <<< [apiv2][status] PUT https://storage.googleapis.com/gcf-v2-uploads-492294811440-us-central1/72492431-4d05-463f-be85-b2504d83010c.zip 200
+[debug] [2024-11-13T18:59:39.081Z] <<< [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-492294811440-us-central1/72492431-4d05-463f-be85-b2504d83010c.zip [omitted]
+[info] +  functions: functions folder uploaded successfully 
+[info] i  functions: creating Node.js 18 (2nd Gen) function sendLeaseStatusEmail(us-central1)... 
+[debug] [2024-11-13T18:59:39.090Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:39.090Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:39.090Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/functions functionId=sendLeaseStatusEmail
+[debug] [2024-11-13T18:59:39.090Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/functions {"name":"projects/subliva-d49ad/locations/us-central1/functions/sendLeaseStatusEmail","buildConfig":{"runtime":"nodejs18","entryPoint":"sendLeaseStatusEmail","source":{"storageSource":{"bucket":"gcf-v2-uploads-492294811440-us-central1","object":"72492431-4d05-463f-be85-b2504d83010c.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"subliva-d49ad\",\"storageBucket\":\"subliva-d49ad.firebasestorage.app\"}","GCLOUD_PROJECT":"subliva-d49ad","EVENTARC_CLOUD_EVENT_SOURCE":"projects/subliva-d49ad/locations/us-central1/services/sendLeaseStatusEmail","FUNCTION_TARGET":"sendLeaseStatusEmail"},"ingressSettings":null,"timeoutSeconds":null,"serviceAccountEmail":null,"availableMemory":"256Mi","minInstanceCount":null,"maxInstanceCount":null,"maxInstanceRequestConcurrency":80,"availableCpu":"1","vpcConnector":null,"vpcConnectorEgressSettings":null},"labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"0b5f052c5be5ae6e9531470bb078d766692eb65e"}}
+[debug] [2024-11-13T18:59:39.761Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/functions 200
+[debug] [2024-11-13T18:59:39.761Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/functions {"name":"projects/subliva-d49ad/locations/us-central1/operations/operation-1731524378945-626cfef86e9c1-bd833e21-06960704","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-13T18:59:39.483082884Z","target":"projects/subliva-d49ad/locations/us-central1/functions/sendLeaseStatusEmail","verb":"create","cancelRequested":false,"apiVersion":"v2"},"done":false}
+[debug] [2024-11-13T18:59:39.762Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:39.762Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:39.763Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524378945-626cfef86e9c1-bd833e21-06960704 [none]
+[debug] [2024-11-13T18:59:39.890Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524378945-626cfef86e9c1-bd833e21-06960704 200
+[debug] [2024-11-13T18:59:39.891Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524378945-626cfef86e9c1-bd833e21-06960704 {"name":"projects/subliva-d49ad/locations/us-central1/operations/operation-1731524378945-626cfef86e9c1-bd833e21-06960704","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-13T18:59:39.483082884Z","target":"projects/subliva-d49ad/locations/us-central1/functions/sendLeaseStatusEmail","verb":"create","cancelRequested":false,"apiVersion":"v2"},"done":false}
+[debug] [2024-11-13T18:59:40.405Z] [create-default-us-central1-sendLeaseStatusEmail] Retrying task index 0
+[debug] [2024-11-13T18:59:40.406Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:40.406Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:40.406Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524378945-626cfef86e9c1-bd833e21-06960704 [none]
+[debug] [2024-11-13T18:59:40.518Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524378945-626cfef86e9c1-bd833e21-06960704 200
+[debug] [2024-11-13T18:59:40.518Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524378945-626cfef86e9c1-bd833e21-06960704 {"name":"projects/subliva-d49ad/locations/us-central1/operations/operation-1731524378945-626cfef86e9c1-bd833e21-06960704","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-13T18:59:39.483082884Z","target":"projects/subliva-d49ad/locations/us-central1/functions/sendLeaseStatusEmail","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/subliva-d49ad/locations/us-central1/functions/sendLeaseStatusEmail","buildConfig":{"runtime":"nodejs18","entryPoint":"sendLeaseStatusEmail","source":{"storageSource":{"bucket":"gcf-v2-sources-492294811440-us-central1","object":"sendLeaseStatusEmail/function-source.zip","generation":"1731524379272497"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/subliva-d49ad/serviceAccounts/492294811440-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/subliva-d49ad/locations/us-central1/services/sendleasestatusemail","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"subliva-d49ad\",\"storageBucket\":\"subliva-d49ad.firebasestorage.app\"}","GCLOUD_PROJECT":"subliva-d49ad","EVENTARC_CLOUD_EVENT_SOURCE":"projects/subliva-d49ad/locations/us-central1/services/sendLeaseStatusEmail","FUNCTION_TARGET":"sendLeaseStatusEmail","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"492294811440-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"0b5f052c5be5ae6e9531470bb078d766692eb65e"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION"},"done":false}
+[debug] [2024-11-13T18:59:41.527Z] [create-default-us-central1-sendLeaseStatusEmail] Retrying task index 0
+[debug] [2024-11-13T18:59:41.528Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:41.528Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:41.528Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524378945-626cfef86e9c1-bd833e21-06960704 [none]
+[debug] [2024-11-13T18:59:41.721Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524378945-626cfef86e9c1-bd833e21-06960704 200
+[debug] [2024-11-13T18:59:41.721Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524378945-626cfef86e9c1-bd833e21-06960704 {"name":"projects/subliva-d49ad/locations/us-central1/operations/operation-1731524378945-626cfef86e9c1-bd833e21-06960704","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-13T18:59:39.483082884Z","target":"projects/subliva-d49ad/locations/us-central1/functions/sendLeaseStatusEmail","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/subliva-d49ad/locations/us-central1/functions/sendLeaseStatusEmail","buildConfig":{"runtime":"nodejs18","entryPoint":"sendLeaseStatusEmail","source":{"storageSource":{"bucket":"gcf-v2-sources-492294811440-us-central1","object":"sendLeaseStatusEmail/function-source.zip","generation":"1731524379272497"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/subliva-d49ad/serviceAccounts/492294811440-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/subliva-d49ad/locations/us-central1/services/sendleasestatusemail","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"subliva-d49ad\",\"storageBucket\":\"subliva-d49ad.firebasestorage.app\"}","GCLOUD_PROJECT":"subliva-d49ad","EVENTARC_CLOUD_EVENT_SOURCE":"projects/subliva-d49ad/locations/us-central1/services/sendLeaseStatusEmail","FUNCTION_TARGET":"sendLeaseStatusEmail","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"492294811440-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"0b5f052c5be5ae6e9531470bb078d766692eb65e"},"environment":"GEN_2"},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/492294811440/locations/us-central1/builds/a5ff13e5-3cc6-49bb-8a01-3c08276bb4bd","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/a5ff13e5-3cc6-49bb-8a01-3c08276bb4bd?project=492294811440"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION","buildName":"projects/492294811440/locations/us-central1/builds/a5ff13e5-3cc6-49bb-8a01-3c08276bb4bd"},"done":false}
+[debug] [2024-11-13T18:59:43.722Z] [create-default-us-central1-sendLeaseStatusEmail] Retrying task index 0
+[debug] [2024-11-13T18:59:43.723Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:43.723Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:43.723Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524378945-626cfef86e9c1-bd833e21-06960704 [none]
+[debug] [2024-11-13T18:59:43.841Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524378945-626cfef86e9c1-bd833e21-06960704 200
+[debug] [2024-11-13T18:59:43.842Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524378945-626cfef86e9c1-bd833e21-06960704 {"name":"projects/subliva-d49ad/locations/us-central1/operations/operation-1731524378945-626cfef86e9c1-bd833e21-06960704","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-13T18:59:39.483082884Z","target":"projects/subliva-d49ad/locations/us-central1/functions/sendLeaseStatusEmail","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/subliva-d49ad/locations/us-central1/functions/sendLeaseStatusEmail","buildConfig":{"runtime":"nodejs18","entryPoint":"sendLeaseStatusEmail","source":{"storageSource":{"bucket":"gcf-v2-sources-492294811440-us-central1","object":"sendLeaseStatusEmail/function-source.zip","generation":"1731524379272497"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/subliva-d49ad/serviceAccounts/492294811440-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/subliva-d49ad/locations/us-central1/services/sendleasestatusemail","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"subliva-d49ad\",\"storageBucket\":\"subliva-d49ad.firebasestorage.app\"}","GCLOUD_PROJECT":"subliva-d49ad","EVENTARC_CLOUD_EVENT_SOURCE":"projects/subliva-d49ad/locations/us-central1/services/sendLeaseStatusEmail","FUNCTION_TARGET":"sendLeaseStatusEmail","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"492294811440-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"0b5f052c5be5ae6e9531470bb078d766692eb65e"},"environment":"GEN_2"},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/492294811440/locations/us-central1/builds/a5ff13e5-3cc6-49bb-8a01-3c08276bb4bd","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/a5ff13e5-3cc6-49bb-8a01-3c08276bb4bd?project=492294811440"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION","buildName":"projects/492294811440/locations/us-central1/builds/a5ff13e5-3cc6-49bb-8a01-3c08276bb4bd"},"done":false}
+[debug] [2024-11-13T18:59:47.842Z] [create-default-us-central1-sendLeaseStatusEmail] Retrying task index 0
+[debug] [2024-11-13T18:59:47.843Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:47.843Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:47.843Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524378945-626cfef86e9c1-bd833e21-06960704 [none]
+[debug] [2024-11-13T18:59:47.971Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524378945-626cfef86e9c1-bd833e21-06960704 200
+[debug] [2024-11-13T18:59:47.971Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524378945-626cfef86e9c1-bd833e21-06960704 {"name":"projects/subliva-d49ad/locations/us-central1/operations/operation-1731524378945-626cfef86e9c1-bd833e21-06960704","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-13T18:59:39.483082884Z","target":"projects/subliva-d49ad/locations/us-central1/functions/sendLeaseStatusEmail","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/subliva-d49ad/locations/us-central1/functions/sendLeaseStatusEmail","buildConfig":{"runtime":"nodejs18","entryPoint":"sendLeaseStatusEmail","source":{"storageSource":{"bucket":"gcf-v2-sources-492294811440-us-central1","object":"sendLeaseStatusEmail/function-source.zip","generation":"1731524379272497"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/subliva-d49ad/serviceAccounts/492294811440-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/subliva-d49ad/locations/us-central1/services/sendleasestatusemail","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"subliva-d49ad\",\"storageBucket\":\"subliva-d49ad.firebasestorage.app\"}","GCLOUD_PROJECT":"subliva-d49ad","EVENTARC_CLOUD_EVENT_SOURCE":"projects/subliva-d49ad/locations/us-central1/services/sendLeaseStatusEmail","FUNCTION_TARGET":"sendLeaseStatusEmail","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"492294811440-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"0b5f052c5be5ae6e9531470bb078d766692eb65e"},"environment":"GEN_2"},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/492294811440/locations/us-central1/builds/a5ff13e5-3cc6-49bb-8a01-3c08276bb4bd","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/a5ff13e5-3cc6-49bb-8a01-3c08276bb4bd?project=492294811440"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION","buildName":"projects/492294811440/locations/us-central1/builds/a5ff13e5-3cc6-49bb-8a01-3c08276bb4bd"},"done":false}
+[debug] [2024-11-13T18:59:55.977Z] [create-default-us-central1-sendLeaseStatusEmail] Retrying task index 0
+[debug] [2024-11-13T18:59:55.978Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:55.978Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T18:59:55.979Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524378945-626cfef86e9c1-bd833e21-06960704 [none]
+[debug] [2024-11-13T18:59:56.094Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524378945-626cfef86e9c1-bd833e21-06960704 200
+[debug] [2024-11-13T18:59:56.094Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524378945-626cfef86e9c1-bd833e21-06960704 {"name":"projects/subliva-d49ad/locations/us-central1/operations/operation-1731524378945-626cfef86e9c1-bd833e21-06960704","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-13T18:59:39.483082884Z","target":"projects/subliva-d49ad/locations/us-central1/functions/sendLeaseStatusEmail","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/subliva-d49ad/locations/us-central1/functions/sendLeaseStatusEmail","buildConfig":{"runtime":"nodejs18","entryPoint":"sendLeaseStatusEmail","source":{"storageSource":{"bucket":"gcf-v2-sources-492294811440-us-central1","object":"sendLeaseStatusEmail/function-source.zip","generation":"1731524379272497"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/subliva-d49ad/serviceAccounts/492294811440-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/subliva-d49ad/locations/us-central1/services/sendleasestatusemail","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"subliva-d49ad\",\"storageBucket\":\"subliva-d49ad.firebasestorage.app\"}","GCLOUD_PROJECT":"subliva-d49ad","EVENTARC_CLOUD_EVENT_SOURCE":"projects/subliva-d49ad/locations/us-central1/services/sendLeaseStatusEmail","FUNCTION_TARGET":"sendLeaseStatusEmail","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"492294811440-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"0b5f052c5be5ae6e9531470bb078d766692eb65e"},"environment":"GEN_2"},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/492294811440/locations/us-central1/builds/a5ff13e5-3cc6-49bb-8a01-3c08276bb4bd","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/a5ff13e5-3cc6-49bb-8a01-3c08276bb4bd?project=492294811440"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION","buildName":"projects/492294811440/locations/us-central1/builds/a5ff13e5-3cc6-49bb-8a01-3c08276bb4bd"},"done":false}
+[debug] [2024-11-13T19:00:06.098Z] [create-default-us-central1-sendLeaseStatusEmail] Retrying task index 0
+[debug] [2024-11-13T19:00:06.098Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:00:06.098Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:00:06.099Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524378945-626cfef86e9c1-bd833e21-06960704 [none]
+[debug] [2024-11-13T19:00:06.225Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524378945-626cfef86e9c1-bd833e21-06960704 200
+[debug] [2024-11-13T19:00:06.225Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524378945-626cfef86e9c1-bd833e21-06960704 {"name":"projects/subliva-d49ad/locations/us-central1/operations/operation-1731524378945-626cfef86e9c1-bd833e21-06960704","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-13T18:59:39.483082884Z","endTime":"2024-11-13T18:59:59.955979935Z","target":"projects/subliva-d49ad/locations/us-central1/functions/sendLeaseStatusEmail","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/subliva-d49ad/locations/us-central1/functions/sendLeaseStatusEmail","buildConfig":{"runtime":"nodejs18","entryPoint":"sendLeaseStatusEmail","source":{"storageSource":{"bucket":"gcf-v2-sources-492294811440-us-central1","object":"sendLeaseStatusEmail/function-source.zip","generation":"1731524379272497"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/subliva-d49ad/serviceAccounts/492294811440-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/subliva-d49ad/locations/us-central1/services/sendleasestatusemail","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"subliva-d49ad\",\"storageBucket\":\"subliva-d49ad.firebasestorage.app\"}","GCLOUD_PROJECT":"subliva-d49ad","EVENTARC_CLOUD_EVENT_SOURCE":"projects/subliva-d49ad/locations/us-central1/services/sendLeaseStatusEmail","FUNCTION_TARGET":"sendLeaseStatusEmail","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"492294811440-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"0b5f052c5be5ae6e9531470bb078d766692eb65e"},"environment":"GEN_2"},"stages":[{"name":"ARTIFACT_REGISTRY","message":"Deleting function artifacts in Artifact Registry","state":"COMPLETE"},{"name":"SERVICE","message":"Deleting Cloud Run service","state":"COMPLETE","resource":"projects/subliva-d49ad/locations/us-central1/services/sendleasestatusemail"}],"operationType":"CREATE_FUNCTION"},"done":true,"error":{"code":3,"message":"Build failed with status: FAILURE. Could not build the function due to a missing permission on the build service account. If you didn't revoke that permission explicitly, this could be caused by a change in the organization policies. Please refer to the following documentation for more details and resolution: https://cloud.google.com/functions/docs/troubleshooting#build-service-account\n You can also view the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/a5ff13e5-3cc6-49bb-8a01-3c08276bb4bd?project=492294811440.\n"}}
+[debug] [2024-11-13T19:00:06.226Z] Got source token undefined for region us-central1
+[error] Build failed with status: FAILURE. Could not build the function due to a missing permission on the build service account. If you didn't revoke that permission explicitly, this could be caused by a change in the organization policies. Please refer to the following documentation for more details and resolution: https://cloud.google.com/functions/docs/troubleshooting#build-service-account
+ You can also view the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/a5ff13e5-3cc6-49bb-8a01-3c08276bb4bd?project=492294811440.
+
+[debug] [2024-11-13T19:00:06.240Z] Total Function Deployment time: 27143
+[debug] [2024-11-13T19:00:06.240Z] 1 Functions Deployed
+[debug] [2024-11-13T19:00:06.241Z] 1 Functions Errored
+[debug] [2024-11-13T19:00:06.241Z] 0 Function Deployments Aborted
+[debug] [2024-11-13T19:00:06.241Z] Average Function Deployment time: 27141
+[info] 
+[info] Functions deploy had errors with the following functions:
+	sendLeaseStatusEmail(us-central1)
+[info] i  functions: cleaning up build files... 
+[debug] [2024-11-13T19:00:06.344Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:00:06.344Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:00:06.345Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:00:06.346Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:00:06.346Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/subliva-d49ad/locations/us-central1/repositories/gcf-artifacts/packages/send_lease_status_email [none]
+[debug] [2024-11-13T19:00:06.348Z] >>> [apiv2][query] GET https://us.gcr.io/v2/subliva-d49ad/gcf/us-central1/tags/list [none]
+[debug] [2024-11-13T19:00:06.490Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/subliva-d49ad/locations/us-central1/repositories/gcf-artifacts/packages/send_lease_status_email 404
+[debug] [2024-11-13T19:00:06.490Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/subliva-d49ad/locations/us-central1/repositories/gcf-artifacts/packages/send_lease_status_email {"error":{"code":404,"message":"Package \"projects/subliva-d49ad/locations/us-central1/repositories/gcf-artifacts/packages/send_lease_status_email\" was not found.","status":"NOT_FOUND"}}
+[debug] [2024-11-13T19:00:06.692Z] <<< [apiv2][status] GET https://us.gcr.io/v2/subliva-d49ad/gcf/us-central1/tags/list 404
+[debug] [2024-11-13T19:00:06.692Z] <<< [apiv2][body] GET https://us.gcr.io/v2/subliva-d49ad/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-11-13T19:00:06.692Z] Failed docker command with error  Request to https://us.gcr.io/v2/subliva-d49ad/gcf/us-central1/tags/list had HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"Request to https://us.gcr.io/v2/subliva-d49ad/gcf/us-central1/tags/list had HTTP Error: 404, Not Found","status":404}
+[debug] [2024-11-13T19:00:06.693Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:00:06.693Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:00:06.694Z] >>> [apiv2][query] GET https://us.gcr.io/v2/subliva-d49ad/gcf/us-central1/tags/list [none]
+[debug] [2024-11-13T19:00:06.999Z] <<< [apiv2][status] GET https://us.gcr.io/v2/subliva-d49ad/gcf/us-central1/tags/list 404
+[debug] [2024-11-13T19:00:06.999Z] <<< [apiv2][body] GET https://us.gcr.io/v2/subliva-d49ad/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-11-13T19:00:06.999Z] Failed docker command with error  Request to https://us.gcr.io/v2/subliva-d49ad/gcf/us-central1/tags/list had HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"Request to https://us.gcr.io/v2/subliva-d49ad/gcf/us-central1/tags/list had HTTP Error: 404, Not Found","status":404}
+[debug] [2024-11-13T19:00:07.101Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:00:07.101Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:00:07.101Z] >>> [apiv2][query] GET https://us.gcr.io/v2/subliva-d49ad/gcf/us-central1/tags/list [none]
+[debug] [2024-11-13T19:00:07.347Z] <<< [apiv2][status] GET https://us.gcr.io/v2/subliva-d49ad/gcf/us-central1/tags/list 404
+[debug] [2024-11-13T19:00:07.347Z] <<< [apiv2][body] GET https://us.gcr.io/v2/subliva-d49ad/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-11-13T19:00:07.347Z] Failed docker command with error  Request to https://us.gcr.io/v2/subliva-d49ad/gcf/us-central1/tags/list had HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"Request to https://us.gcr.io/v2/subliva-d49ad/gcf/us-central1/tags/list had HTTP Error: 404, Not Found","status":404}
+[warn] !  functions: Unhandled error cleaning up build images. This could result in a small monthly bill if not corrected. You can attempt to delete these images by redeploying or you can delete them manually at https://console.cloud.google.com/gcr/images/subliva-d49ad/us/gcf 
+[debug] [2024-11-13T19:00:07.349Z] Functions deploy failed.
+[debug] [2024-11-13T19:00:07.349Z] {
+  "endpoint": {
+    "id": "sendLeaseStatusEmail",
+    "project": "subliva-d49ad",
+    "region": "us-central1",
+    "entryPoint": "sendLeaseStatusEmail",
+    "platform": "gcfv2",
+    "runtime": "nodejs18",
+    "callableTrigger": {},
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "serviceAccount": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "concurrency": 80,
+    "vpc": null,
+    "environmentVariables": {
+      "FIREBASE_CONFIG": "{\"projectId\":\"subliva-d49ad\",\"storageBucket\":\"subliva-d49ad.firebasestorage.app\"}",
+      "GCLOUD_PROJECT": "subliva-d49ad",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/subliva-d49ad/locations/us-central1/services/sendLeaseStatusEmail"
+    },
+    "codebase": "default",
+    "cpu": 1,
+    "targetedByOnly": false,
+    "hash": "0b5f052c5be5ae6e9531470bb078d766692eb65e"
+  },
+  "op": "create",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "exit": 1,
+    "message": "Build failed with status: FAILURE. Could not build the function due to a missing permission on the build service account. If you didn't revoke that permission explicitly, this could be caused by a change in the organization policies. Please refer to the following documentation for more details and resolution: https://cloud.google.com/functions/docs/troubleshooting#build-service-account\n You can also view the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/a5ff13e5-3cc6-49bb-8a01-3c08276bb4bd?project=492294811440.\n",
+    "original": {
+      "code": 3,
+      "message": "Build failed with status: FAILURE. Could not build the function due to a missing permission on the build service account. If you didn't revoke that permission explicitly, this could be caused by a change in the organization policies. Please refer to the following documentation for more details and resolution: https://cloud.google.com/functions/docs/troubleshooting#build-service-account\n You can also view the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/a5ff13e5-3cc6-49bb-8a01-3c08276bb4bd?project=492294811440.\n"
+    },
+    "status": 3,
+    "code": 3
+  }
+}
+[debug] [2024-11-13T19:00:07.458Z] Error: Failed to create function sendLeaseStatusEmail in region us-central1
+    at C:\Users\suley\AppData\Roaming\nvm\v18.20.4\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:294:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Fabricator.createV2Function (C:\Users\suley\AppData\Roaming\nvm\v18.20.4\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:278:30)
+    at async Fabricator.createEndpoint (C:\Users\suley\AppData\Roaming\nvm\v18.20.4\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:137:13)
+    at async handle (C:\Users\suley\AppData\Roaming\nvm\v18.20.4\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:89:17)
+[error] 
+[error] Error: There was an error deploying functions
+[debug] [2024-11-13T19:03:53.671Z] ----------------------------------------------------------------------
+[debug] [2024-11-13T19:03:53.672Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
+[debug] [2024-11-13T19:03:53.672Z] CLI Version:   13.25.0
+[debug] [2024-11-13T19:03:53.673Z] Platform:      win32
+[debug] [2024-11-13T19:03:53.673Z] Node Version:  v18.20.4
+[debug] [2024-11-13T19:03:53.674Z] Time:          Wed Nov 13 2024 13:03:53 GMT-0600 (Central Standard Time)
+[debug] [2024-11-13T19:03:53.674Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-13T19:03:53.734Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-13T19:03:53.734Z] > authorizing via signed-in user (ghazijichi@subliva.com)
+[debug] [2024-11-13T19:03:53.734Z] [iam] checking project subliva-d49ad for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2024-11-13T19:03:53.736Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:53.736Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:53.738Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/subliva-d49ad:testIamPermissions [none]
+[debug] [2024-11-13T19:03:53.738Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/subliva-d49ad:testIamPermissions x-goog-quota-user=projects/subliva-d49ad
+[debug] [2024-11-13T19:03:53.738Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/subliva-d49ad:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-11-13T19:03:53.997Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/subliva-d49ad:testIamPermissions 200
+[debug] [2024-11-13T19:03:53.997Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/subliva-d49ad:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-11-13T19:03:53.998Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:53.998Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:53.998Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/subliva-d49ad/serviceAccounts/subliva-d49ad@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2024-11-13T19:03:53.998Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/subliva-d49ad/serviceAccounts/subliva-d49ad@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-11-13T19:03:54.182Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/subliva-d49ad/serviceAccounts/subliva-d49ad@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2024-11-13T19:03:54.182Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/subliva-d49ad/serviceAccounts/subliva-d49ad@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'subliva-d49ad'...
+[info] 
+[info] i  deploying functions 
+[debug] [2024-11-13T19:03:54.187Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:54.187Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:54.188Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/subliva-d49ad [none]
+[debug] [2024-11-13T19:03:54.366Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/subliva-d49ad 200
+[debug] [2024-11-13T19:03:54.366Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/subliva-d49ad {"projectId":"subliva-d49ad","projectNumber":"492294811440","displayName":"Subliva","name":"projects/subliva-d49ad","resources":{"hostingSite":"subliva-d49ad"},"state":"ACTIVE","etag":"1_ea8abbf4-2c43-4c9b-9470-638a474dc6b2"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[debug] [2024-11-13T19:03:54.371Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:54.371Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:54.371Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:54.371Z] Checked if tokens are valid: true, expires at: 1731527928293
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2024-11-13T19:03:54.372Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:54.373Z] Checked if tokens are valid: true, expires at: 1731527928293
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2024-11-13T19:03:54.374Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:54.374Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:54.374Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-11-13T19:03:54.374Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/subliva-d49ad
+[debug] [2024-11-13T19:03:54.376Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-11-13T19:03:54.376Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/subliva-d49ad
+[debug] [2024-11-13T19:03:54.377Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/cloudbuild.googleapis.com [none]
+[debug] [2024-11-13T19:03:54.377Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/cloudbuild.googleapis.com x-goog-quota-user=projects/subliva-d49ad
+[debug] [2024-11-13T19:03:54.378Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/artifactregistry.googleapis.com [none]
+[debug] [2024-11-13T19:03:54.378Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/artifactregistry.googleapis.com x-goog-quota-user=projects/subliva-d49ad
+[debug] [2024-11-13T19:03:54.667Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/cloudbuild.googleapis.com 200
+[debug] [2024-11-13T19:03:54.667Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2024-11-13T19:03:54.690Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/cloudfunctions.googleapis.com 200
+[debug] [2024-11-13T19:03:54.691Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2024-11-13T19:03:54.750Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/artifactregistry.googleapis.com 200
+[debug] [2024-11-13T19:03:54.750Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2024-11-13T19:03:54.786Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/runtimeconfig.googleapis.com 200
+[debug] [2024-11-13T19:03:54.786Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-11-13T19:03:54.786Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:54.786Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:54.786Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/subliva-d49ad/adminSdkConfig [none]
+[debug] [2024-11-13T19:03:55.002Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/subliva-d49ad/adminSdkConfig 200
+[debug] [2024-11-13T19:03:55.002Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/subliva-d49ad/adminSdkConfig {"projectId":"subliva-d49ad","storageBucket":"subliva-d49ad.firebasestorage.app"}
+[debug] [2024-11-13T19:03:55.003Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:55.003Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:55.004Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/subliva-d49ad/configs [none]
+[debug] [2024-11-13T19:03:55.198Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/subliva-d49ad/configs 200
+[debug] [2024-11-13T19:03:55.199Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/subliva-d49ad/configs {"configs":[{"name":"projects/subliva-d49ad/configs/gmail"}]}
+[debug] [2024-11-13T19:03:55.199Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:55.199Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:55.200Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/subliva-d49ad/configs/gmail/variables [none]
+[debug] [2024-11-13T19:03:55.322Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/subliva-d49ad/configs/gmail/variables 200
+[debug] [2024-11-13T19:03:55.322Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/subliva-d49ad/configs/gmail/variables {"variables":[{"name":"projects/subliva-d49ad/configs/gmail/variables/email","updateTime":"2024-11-12T19:40:32.962282626Z"},{"name":"projects/subliva-d49ad/configs/gmail/variables/password","updateTime":"2024-11-12T19:40:33.946672351Z"}]}
+[debug] [2024-11-13T19:03:55.323Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:55.323Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:55.323Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:55.323Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:55.323Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/subliva-d49ad/configs/gmail/variables/email [none]
+[debug] [2024-11-13T19:03:55.324Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/subliva-d49ad/configs/gmail/variables/password [none]
+[debug] [2024-11-13T19:03:55.452Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/subliva-d49ad/configs/gmail/variables/password 200
+[debug] [2024-11-13T19:03:55.452Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/subliva-d49ad/configs/gmail/variables/password {"name":"projects/subliva-d49ad/configs/gmail/variables/password","updateTime":"2024-11-12T19:40:33.946672351Z","text":"Subaru247$"}
+[debug] [2024-11-13T19:03:55.454Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/subliva-d49ad/configs/gmail/variables/email 200
+[debug] [2024-11-13T19:03:55.455Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/subliva-d49ad/configs/gmail/variables/email {"name":"projects/subliva-d49ad/configs/gmail/variables/email","updateTime":"2024-11-12T19:40:32.962282626Z","text":"support@subliva.com"}
+[debug] [2024-11-13T19:03:55.457Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2024-11-13T19:03:56.338Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^5.1.0",
+    "nodemailer": "^6.9.16"
+  },
+  "private": true
+}
+[debug] [2024-11-13T19:03:56.339Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[debug] [2024-11-13T19:03:56.340Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-11-13T19:03:56.347Z] Found firebase-functions binary at 'C:\Users\suley\Documents\SublivaWebsite\subliva\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8647
+
+[debug] [2024-11-13T19:03:56.883Z] Got response from /__/functions.yaml {"endpoints":{"sendLeaseStatusEmail":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"sendLeaseStatusEmail"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] i  extensions: ensuring required API firebaseextensions.googleapis.com is enabled... 
+[debug] [2024-11-13T19:03:56.910Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:56.910Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:56.910Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/firebaseextensions.googleapis.com [none]
+[debug] [2024-11-13T19:03:56.910Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/firebaseextensions.googleapis.com x-goog-quota-user=projects/subliva-d49ad
+[debug] [2024-11-13T19:03:57.154Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/firebaseextensions.googleapis.com 200
+[debug] [2024-11-13T19:03:57.154Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/firebaseextensions.googleapis.com [omitted]
+[info] +  extensions: required API firebaseextensions.googleapis.com is enabled 
+[debug] [2024-11-13T19:03:57.155Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-13T19:03:57.155Z] > authorizing via signed-in user (ghazijichi@subliva.com)
+[debug] [2024-11-13T19:03:57.155Z] [iam] checking project subliva-d49ad for permissions ["firebase.projects.get","firebaseextensions.instances.list"]
+[debug] [2024-11-13T19:03:57.156Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:57.156Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:57.156Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/subliva-d49ad:testIamPermissions [none]
+[debug] [2024-11-13T19:03:57.156Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/subliva-d49ad:testIamPermissions x-goog-quota-user=projects/subliva-d49ad
+[debug] [2024-11-13T19:03:57.156Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/subliva-d49ad:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2024-11-13T19:03:57.292Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/subliva-d49ad:testIamPermissions 200
+[debug] [2024-11-13T19:03:57.293Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/subliva-d49ad:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2024-11-13T19:03:57.293Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:57.293Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:57.295Z] >>> [apiv2][query] GET https://firebaseextensions.googleapis.com/v1beta/projects/subliva-d49ad/instances pageSize=100&pageToken=
+[debug] [2024-11-13T19:03:57.621Z] <<< [apiv2][status] GET https://firebaseextensions.googleapis.com/v1beta/projects/subliva-d49ad/instances 200
+[debug] [2024-11-13T19:03:57.621Z] <<< [apiv2][body] GET https://firebaseextensions.googleapis.com/v1beta/projects/subliva-d49ad/instances {}
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged C:\Users\suley\Documents\SublivaWebsite\subliva\functions (54.34 KB) for uploading 
+[debug] [2024-11-13T19:03:57.668Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:57.669Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:57.669Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/subliva-d49ad/locations/-/functions [none]
+[debug] [2024-11-13T19:03:58.548Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/subliva-d49ad/locations/-/functions 200
+[debug] [2024-11-13T19:03:58.549Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/subliva-d49ad/locations/-/functions {}
+[debug] [2024-11-13T19:03:58.549Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:58.549Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:58.549Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2024-11-13T19:03:59.095Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/-/functions 200
+[debug] [2024-11-13T19:03:59.095Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/-/functions {}
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[debug] [2024-11-13T19:03:59.097Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:59.098Z] Checked if tokens are valid: true, expires at: 1731527928293
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[debug] [2024-11-13T19:03:59.098Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:59.098Z] Checked if tokens are valid: true, expires at: 1731527928293
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[debug] [2024-11-13T19:03:59.099Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:59.099Z] Checked if tokens are valid: true, expires at: 1731527928293
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2024-11-13T19:03:59.100Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:59.100Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:59.100Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/run.googleapis.com [none]
+[debug] [2024-11-13T19:03:59.100Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/run.googleapis.com x-goog-quota-user=projects/subliva-d49ad
+[debug] [2024-11-13T19:03:59.101Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/eventarc.googleapis.com [none]
+[debug] [2024-11-13T19:03:59.101Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/eventarc.googleapis.com x-goog-quota-user=projects/subliva-d49ad
+[debug] [2024-11-13T19:03:59.103Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/pubsub.googleapis.com [none]
+[debug] [2024-11-13T19:03:59.103Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/pubsub.googleapis.com x-goog-quota-user=projects/subliva-d49ad
+[debug] [2024-11-13T19:03:59.104Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/storage.googleapis.com [none]
+[debug] [2024-11-13T19:03:59.104Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/storage.googleapis.com x-goog-quota-user=projects/subliva-d49ad
+[debug] [2024-11-13T19:03:59.415Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/eventarc.googleapis.com 200
+[debug] [2024-11-13T19:03:59.416Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/eventarc.googleapis.com [omitted]
+[info] +  functions: required API eventarc.googleapis.com is enabled 
+[debug] [2024-11-13T19:03:59.444Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/pubsub.googleapis.com 200
+[debug] [2024-11-13T19:03:59.444Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/pubsub.googleapis.com [omitted]
+[info] +  functions: required API pubsub.googleapis.com is enabled 
+[debug] [2024-11-13T19:03:59.456Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/storage.googleapis.com 200
+[debug] [2024-11-13T19:03:59.456Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/storage.googleapis.com [omitted]
+[info] +  functions: required API storage.googleapis.com is enabled 
+[debug] [2024-11-13T19:03:59.491Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/run.googleapis.com 200
+[debug] [2024-11-13T19:03:59.492Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/subliva-d49ad/services/run.googleapis.com [omitted]
+[info] +  functions: required API run.googleapis.com is enabled 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[debug] [2024-11-13T19:03:59.494Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:59.494Z] Checked if tokens are valid: true, expires at: 1731527928293
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2024-11-13T19:03:59.494Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:59.494Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:59.495Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/492294811440/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2024-11-13T19:03:59.497Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/492294811440/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2024-11-13T19:03:59.940Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/492294811440/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2024-11-13T19:03:59.941Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/492294811440/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-492294811440@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"111059423530882781351"}}
+[debug] [2024-11-13T19:03:59.978Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/492294811440/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2024-11-13T19:03:59.978Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/492294811440/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-492294811440@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"105593096823154127188"}}
+[debug] [2024-11-13T19:03:59.981Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:59.981Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:03:59.982Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/subliva-d49ad [none]
+[debug] [2024-11-13T19:04:00.139Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/subliva-d49ad 200
+[debug] [2024-11-13T19:04:00.139Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/subliva-d49ad {"projectId":"subliva-d49ad","projectNumber":"492294811440","displayName":"Subliva","name":"projects/subliva-d49ad","resources":{"hostingSite":"subliva-d49ad"},"state":"ACTIVE","etag":"1_ea8abbf4-2c43-4c9b-9470-638a474dc6b2"}
+[debug] [2024-11-13T19:04:00.141Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:04:00.141Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:04:00.141Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/subliva-d49ad/billingInfo [none]
+[debug] [2024-11-13T19:04:00.458Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/subliva-d49ad/billingInfo 200
+[debug] [2024-11-13T19:04:00.458Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/subliva-d49ad/billingInfo {"name":"projects/subliva-d49ad/billingInfo","projectId":"subliva-d49ad","billingAccountName":"billingAccounts/0163FF-CF0504-0C930A","billingEnabled":true}
+[debug] [2024-11-13T19:04:00.459Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:04:00.459Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:04:00.459Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2024-11-13T19:04:00.687Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2024-11-13T19:04:00.687Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-492294811440-us-central1/f13ac970-24b5-4ae0-a711-0df21d8031b3.zip?GoogleAccessId=service-492294811440@gcf-admin-robot.iam.gserviceaccount.com&Expires=1731526440&Signature=B9qfcGnkyhN35dZG8CXrwA25X%2FbwrxlGwIK2oCEMSAYxCdhwdcJ3o3CdkR4pN5%2BvevTY2kmc4yYICN0r7iWcoxkuZjUlyqX5eApAvKrN3lv%2B31FUXiK4v9z7sRSXcz962xU0rIcw85G0TtAvjeV%2FqZ10RJeJoexM4WX9CaLZoEg8hmPfTs8AUbqN0XmSl0LVG%2Bw3g%2FTUAM7DQuSaxXthuopJqzRqi8Q5qYpRiPutXB4sc8ue23Ry7B5flpw2QyBD3yVVRSNOT%2BwCLmv4OXDe3Jam8fDW7pIEsZi65LydLgZlKn61OiHyp2KMecFrcezqXn9AeRCelkEkO%2BrunOUQ7Q%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-492294811440-us-central1","object":"f13ac970-24b5-4ae0-a711-0df21d8031b3.zip"}}
+[debug] [2024-11-13T19:04:00.689Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-492294811440-us-central1/f13ac970-24b5-4ae0-a711-0df21d8031b3.zip GoogleAccessId=service-492294811440%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1731526440&Signature=B9qfcGnkyhN35dZG8CXrwA25X%2FbwrxlGwIK2oCEMSAYxCdhwdcJ3o3CdkR4pN5%2BvevTY2kmc4yYICN0r7iWcoxkuZjUlyqX5eApAvKrN3lv%2B31FUXiK4v9z7sRSXcz962xU0rIcw85G0TtAvjeV%2FqZ10RJeJoexM4WX9CaLZoEg8hmPfTs8AUbqN0XmSl0LVG%2Bw3g%2FTUAM7DQuSaxXthuopJqzRqi8Q5qYpRiPutXB4sc8ue23Ry7B5flpw2QyBD3yVVRSNOT%2BwCLmv4OXDe3Jam8fDW7pIEsZi65LydLgZlKn61OiHyp2KMecFrcezqXn9AeRCelkEkO%2BrunOUQ7Q%3D%3D
+[debug] [2024-11-13T19:04:00.690Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-492294811440-us-central1/f13ac970-24b5-4ae0-a711-0df21d8031b3.zip [stream]
+[debug] [2024-11-13T19:04:00.969Z] <<< [apiv2][status] PUT https://storage.googleapis.com/gcf-v2-uploads-492294811440-us-central1/f13ac970-24b5-4ae0-a711-0df21d8031b3.zip 200
+[debug] [2024-11-13T19:04:00.969Z] <<< [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-492294811440-us-central1/f13ac970-24b5-4ae0-a711-0df21d8031b3.zip [omitted]
+[info] +  functions: functions folder uploaded successfully 
+[info] i  functions: creating Node.js 18 (2nd Gen) function sendLeaseStatusEmail(us-central1)... 
+[debug] [2024-11-13T19:04:00.980Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:04:00.980Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:04:00.981Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/functions functionId=sendLeaseStatusEmail
+[debug] [2024-11-13T19:04:00.981Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/functions {"name":"projects/subliva-d49ad/locations/us-central1/functions/sendLeaseStatusEmail","buildConfig":{"runtime":"nodejs18","entryPoint":"sendLeaseStatusEmail","source":{"storageSource":{"bucket":"gcf-v2-uploads-492294811440-us-central1","object":"f13ac970-24b5-4ae0-a711-0df21d8031b3.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"subliva-d49ad\",\"storageBucket\":\"subliva-d49ad.firebasestorage.app\"}","GCLOUD_PROJECT":"subliva-d49ad","EVENTARC_CLOUD_EVENT_SOURCE":"projects/subliva-d49ad/locations/us-central1/services/sendLeaseStatusEmail","FUNCTION_TARGET":"sendLeaseStatusEmail"},"ingressSettings":null,"timeoutSeconds":null,"serviceAccountEmail":null,"availableMemory":"256Mi","minInstanceCount":null,"maxInstanceCount":null,"maxInstanceRequestConcurrency":80,"availableCpu":"1","vpcConnector":null,"vpcConnectorEgressSettings":null},"labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"e0910259ae7a9f96c34e2dbdd804bca45db554c0"}}
+[debug] [2024-11-13T19:04:01.682Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/functions 200
+[debug] [2024-11-13T19:04:01.682Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/functions {"name":"projects/subliva-d49ad/locations/us-central1/operations/operation-1731524640864-626cfff237a66-3c9bc94d-232455c7","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-13T19:04:01.398518301Z","target":"projects/subliva-d49ad/locations/us-central1/functions/sendLeaseStatusEmail","verb":"create","cancelRequested":false,"apiVersion":"v2"},"done":false}
+[debug] [2024-11-13T19:04:01.683Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:04:01.684Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:04:01.684Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524640864-626cfff237a66-3c9bc94d-232455c7 [none]
+[debug] [2024-11-13T19:04:01.820Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524640864-626cfff237a66-3c9bc94d-232455c7 200
+[debug] [2024-11-13T19:04:01.821Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524640864-626cfff237a66-3c9bc94d-232455c7 {"name":"projects/subliva-d49ad/locations/us-central1/operations/operation-1731524640864-626cfff237a66-3c9bc94d-232455c7","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-13T19:04:01.398518301Z","target":"projects/subliva-d49ad/locations/us-central1/functions/sendLeaseStatusEmail","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/subliva-d49ad/locations/us-central1/functions/sendLeaseStatusEmail","buildConfig":{"runtime":"nodejs18","entryPoint":"sendLeaseStatusEmail","source":{"storageSource":{"bucket":"gcf-v2-sources-492294811440-us-central1","object":"sendLeaseStatusEmail/function-source.zip","generation":"1731524641172199"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/subliva-d49ad/serviceAccounts/492294811440-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/subliva-d49ad/locations/us-central1/services/sendleasestatusemail","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"subliva-d49ad\",\"storageBucket\":\"subliva-d49ad.firebasestorage.app\"}","GCLOUD_PROJECT":"subliva-d49ad","EVENTARC_CLOUD_EVENT_SOURCE":"projects/subliva-d49ad/locations/us-central1/services/sendLeaseStatusEmail","FUNCTION_TARGET":"sendLeaseStatusEmail","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"492294811440-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"e0910259ae7a9f96c34e2dbdd804bca45db554c0"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION"},"done":false}
+[debug] [2024-11-13T19:04:02.325Z] [create-default-us-central1-sendLeaseStatusEmail] Retrying task index 0
+[debug] [2024-11-13T19:04:02.325Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:04:02.326Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:04:02.326Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524640864-626cfff237a66-3c9bc94d-232455c7 [none]
+[debug] [2024-11-13T19:04:02.457Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524640864-626cfff237a66-3c9bc94d-232455c7 200
+[debug] [2024-11-13T19:04:02.458Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524640864-626cfff237a66-3c9bc94d-232455c7 {"name":"projects/subliva-d49ad/locations/us-central1/operations/operation-1731524640864-626cfff237a66-3c9bc94d-232455c7","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-13T19:04:01.398518301Z","target":"projects/subliva-d49ad/locations/us-central1/functions/sendLeaseStatusEmail","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/subliva-d49ad/locations/us-central1/functions/sendLeaseStatusEmail","buildConfig":{"runtime":"nodejs18","entryPoint":"sendLeaseStatusEmail","source":{"storageSource":{"bucket":"gcf-v2-sources-492294811440-us-central1","object":"sendLeaseStatusEmail/function-source.zip","generation":"1731524641172199"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/subliva-d49ad/serviceAccounts/492294811440-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/subliva-d49ad/locations/us-central1/services/sendleasestatusemail","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"subliva-d49ad\",\"storageBucket\":\"subliva-d49ad.firebasestorage.app\"}","GCLOUD_PROJECT":"subliva-d49ad","EVENTARC_CLOUD_EVENT_SOURCE":"projects/subliva-d49ad/locations/us-central1/services/sendLeaseStatusEmail","FUNCTION_TARGET":"sendLeaseStatusEmail","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"492294811440-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"e0910259ae7a9f96c34e2dbdd804bca45db554c0"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION"},"done":false}
+[debug] [2024-11-13T19:04:03.468Z] [create-default-us-central1-sendLeaseStatusEmail] Retrying task index 0
+[debug] [2024-11-13T19:04:03.468Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:04:03.468Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:04:03.468Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524640864-626cfff237a66-3c9bc94d-232455c7 [none]
+[debug] [2024-11-13T19:04:03.642Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524640864-626cfff237a66-3c9bc94d-232455c7 200
+[debug] [2024-11-13T19:04:03.642Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524640864-626cfff237a66-3c9bc94d-232455c7 {"name":"projects/subliva-d49ad/locations/us-central1/operations/operation-1731524640864-626cfff237a66-3c9bc94d-232455c7","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-13T19:04:01.398518301Z","target":"projects/subliva-d49ad/locations/us-central1/functions/sendLeaseStatusEmail","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/subliva-d49ad/locations/us-central1/functions/sendLeaseStatusEmail","buildConfig":{"runtime":"nodejs18","entryPoint":"sendLeaseStatusEmail","source":{"storageSource":{"bucket":"gcf-v2-sources-492294811440-us-central1","object":"sendLeaseStatusEmail/function-source.zip","generation":"1731524641172199"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/subliva-d49ad/serviceAccounts/492294811440-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/subliva-d49ad/locations/us-central1/services/sendleasestatusemail","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"subliva-d49ad\",\"storageBucket\":\"subliva-d49ad.firebasestorage.app\"}","GCLOUD_PROJECT":"subliva-d49ad","EVENTARC_CLOUD_EVENT_SOURCE":"projects/subliva-d49ad/locations/us-central1/services/sendLeaseStatusEmail","FUNCTION_TARGET":"sendLeaseStatusEmail","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"492294811440-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"e0910259ae7a9f96c34e2dbdd804bca45db554c0"},"environment":"GEN_2"},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/492294811440/locations/us-central1/builds/6e49639a-7bc7-4a2a-83f4-fbcb57aa0f1c","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/6e49639a-7bc7-4a2a-83f4-fbcb57aa0f1c?project=492294811440"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION","buildName":"projects/492294811440/locations/us-central1/builds/6e49639a-7bc7-4a2a-83f4-fbcb57aa0f1c"},"done":false}
+[debug] [2024-11-13T19:04:05.657Z] [create-default-us-central1-sendLeaseStatusEmail] Retrying task index 0
+[debug] [2024-11-13T19:04:05.657Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:04:05.657Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:04:05.657Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524640864-626cfff237a66-3c9bc94d-232455c7 [none]
+[debug] [2024-11-13T19:04:05.775Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524640864-626cfff237a66-3c9bc94d-232455c7 200
+[debug] [2024-11-13T19:04:05.775Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524640864-626cfff237a66-3c9bc94d-232455c7 {"name":"projects/subliva-d49ad/locations/us-central1/operations/operation-1731524640864-626cfff237a66-3c9bc94d-232455c7","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-13T19:04:01.398518301Z","target":"projects/subliva-d49ad/locations/us-central1/functions/sendLeaseStatusEmail","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/subliva-d49ad/locations/us-central1/functions/sendLeaseStatusEmail","buildConfig":{"runtime":"nodejs18","entryPoint":"sendLeaseStatusEmail","source":{"storageSource":{"bucket":"gcf-v2-sources-492294811440-us-central1","object":"sendLeaseStatusEmail/function-source.zip","generation":"1731524641172199"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/subliva-d49ad/serviceAccounts/492294811440-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/subliva-d49ad/locations/us-central1/services/sendleasestatusemail","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"subliva-d49ad\",\"storageBucket\":\"subliva-d49ad.firebasestorage.app\"}","GCLOUD_PROJECT":"subliva-d49ad","EVENTARC_CLOUD_EVENT_SOURCE":"projects/subliva-d49ad/locations/us-central1/services/sendLeaseStatusEmail","FUNCTION_TARGET":"sendLeaseStatusEmail","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"492294811440-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"e0910259ae7a9f96c34e2dbdd804bca45db554c0"},"environment":"GEN_2"},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/492294811440/locations/us-central1/builds/6e49639a-7bc7-4a2a-83f4-fbcb57aa0f1c","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/6e49639a-7bc7-4a2a-83f4-fbcb57aa0f1c?project=492294811440"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION","buildName":"projects/492294811440/locations/us-central1/builds/6e49639a-7bc7-4a2a-83f4-fbcb57aa0f1c"},"done":false}
+[debug] [2024-11-13T19:04:09.797Z] [create-default-us-central1-sendLeaseStatusEmail] Retrying task index 0
+[debug] [2024-11-13T19:04:09.797Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:04:09.797Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:04:09.797Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524640864-626cfff237a66-3c9bc94d-232455c7 [none]
+[debug] [2024-11-13T19:04:09.931Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524640864-626cfff237a66-3c9bc94d-232455c7 200
+[debug] [2024-11-13T19:04:09.932Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524640864-626cfff237a66-3c9bc94d-232455c7 {"name":"projects/subliva-d49ad/locations/us-central1/operations/operation-1731524640864-626cfff237a66-3c9bc94d-232455c7","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-13T19:04:01.398518301Z","target":"projects/subliva-d49ad/locations/us-central1/functions/sendLeaseStatusEmail","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/subliva-d49ad/locations/us-central1/functions/sendLeaseStatusEmail","buildConfig":{"runtime":"nodejs18","entryPoint":"sendLeaseStatusEmail","source":{"storageSource":{"bucket":"gcf-v2-sources-492294811440-us-central1","object":"sendLeaseStatusEmail/function-source.zip","generation":"1731524641172199"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/subliva-d49ad/serviceAccounts/492294811440-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/subliva-d49ad/locations/us-central1/services/sendleasestatusemail","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"subliva-d49ad\",\"storageBucket\":\"subliva-d49ad.firebasestorage.app\"}","GCLOUD_PROJECT":"subliva-d49ad","EVENTARC_CLOUD_EVENT_SOURCE":"projects/subliva-d49ad/locations/us-central1/services/sendLeaseStatusEmail","FUNCTION_TARGET":"sendLeaseStatusEmail","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"492294811440-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"e0910259ae7a9f96c34e2dbdd804bca45db554c0"},"environment":"GEN_2"},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/492294811440/locations/us-central1/builds/6e49639a-7bc7-4a2a-83f4-fbcb57aa0f1c","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/6e49639a-7bc7-4a2a-83f4-fbcb57aa0f1c?project=492294811440"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION","buildName":"projects/492294811440/locations/us-central1/builds/6e49639a-7bc7-4a2a-83f4-fbcb57aa0f1c"},"done":false}
+[debug] [2024-11-13T19:04:17.934Z] [create-default-us-central1-sendLeaseStatusEmail] Retrying task index 0
+[debug] [2024-11-13T19:04:17.935Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:04:17.935Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:04:17.936Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524640864-626cfff237a66-3c9bc94d-232455c7 [none]
+[debug] [2024-11-13T19:04:18.063Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524640864-626cfff237a66-3c9bc94d-232455c7 200
+[debug] [2024-11-13T19:04:18.063Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524640864-626cfff237a66-3c9bc94d-232455c7 {"name":"projects/subliva-d49ad/locations/us-central1/operations/operation-1731524640864-626cfff237a66-3c9bc94d-232455c7","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-13T19:04:01.398518301Z","target":"projects/subliva-d49ad/locations/us-central1/functions/sendLeaseStatusEmail","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/subliva-d49ad/locations/us-central1/functions/sendLeaseStatusEmail","buildConfig":{"runtime":"nodejs18","entryPoint":"sendLeaseStatusEmail","source":{"storageSource":{"bucket":"gcf-v2-sources-492294811440-us-central1","object":"sendLeaseStatusEmail/function-source.zip","generation":"1731524641172199"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/subliva-d49ad/serviceAccounts/492294811440-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/subliva-d49ad/locations/us-central1/services/sendleasestatusemail","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"subliva-d49ad\",\"storageBucket\":\"subliva-d49ad.firebasestorage.app\"}","GCLOUD_PROJECT":"subliva-d49ad","EVENTARC_CLOUD_EVENT_SOURCE":"projects/subliva-d49ad/locations/us-central1/services/sendLeaseStatusEmail","FUNCTION_TARGET":"sendLeaseStatusEmail","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"492294811440-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"e0910259ae7a9f96c34e2dbdd804bca45db554c0"},"environment":"GEN_2"},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/492294811440/locations/us-central1/builds/6e49639a-7bc7-4a2a-83f4-fbcb57aa0f1c","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/6e49639a-7bc7-4a2a-83f4-fbcb57aa0f1c?project=492294811440"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION","buildName":"projects/492294811440/locations/us-central1/builds/6e49639a-7bc7-4a2a-83f4-fbcb57aa0f1c"},"done":false}
+[debug] [2024-11-13T19:04:28.071Z] [create-default-us-central1-sendLeaseStatusEmail] Retrying task index 0
+[debug] [2024-11-13T19:04:28.071Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:04:28.072Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:04:28.072Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524640864-626cfff237a66-3c9bc94d-232455c7 [none]
+[debug] [2024-11-13T19:04:28.191Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524640864-626cfff237a66-3c9bc94d-232455c7 200
+[debug] [2024-11-13T19:04:28.192Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/subliva-d49ad/locations/us-central1/operations/operation-1731524640864-626cfff237a66-3c9bc94d-232455c7 {"name":"projects/subliva-d49ad/locations/us-central1/operations/operation-1731524640864-626cfff237a66-3c9bc94d-232455c7","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-13T19:04:01.398518301Z","endTime":"2024-11-13T19:04:22.412854495Z","target":"projects/subliva-d49ad/locations/us-central1/functions/sendLeaseStatusEmail","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/subliva-d49ad/locations/us-central1/functions/sendLeaseStatusEmail","buildConfig":{"runtime":"nodejs18","entryPoint":"sendLeaseStatusEmail","source":{"storageSource":{"bucket":"gcf-v2-sources-492294811440-us-central1","object":"sendLeaseStatusEmail/function-source.zip","generation":"1731524641172199"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/subliva-d49ad/serviceAccounts/492294811440-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/subliva-d49ad/locations/us-central1/services/sendleasestatusemail","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"subliva-d49ad\",\"storageBucket\":\"subliva-d49ad.firebasestorage.app\"}","GCLOUD_PROJECT":"subliva-d49ad","EVENTARC_CLOUD_EVENT_SOURCE":"projects/subliva-d49ad/locations/us-central1/services/sendLeaseStatusEmail","FUNCTION_TARGET":"sendLeaseStatusEmail","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"492294811440-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"e0910259ae7a9f96c34e2dbdd804bca45db554c0"},"environment":"GEN_2"},"stages":[{"name":"ARTIFACT_REGISTRY","message":"Deleting function artifacts in Artifact Registry","state":"COMPLETE"},{"name":"SERVICE","message":"Deleting Cloud Run service","state":"COMPLETE","resource":"projects/subliva-d49ad/locations/us-central1/services/sendleasestatusemail"}],"operationType":"CREATE_FUNCTION"},"done":true,"error":{"code":3,"message":"Build failed with status: FAILURE. Could not build the function due to a missing permission on the build service account. If you didn't revoke that permission explicitly, this could be caused by a change in the organization policies. Please refer to the following documentation for more details and resolution: https://cloud.google.com/functions/docs/troubleshooting#build-service-account\n You can also view the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/6e49639a-7bc7-4a2a-83f4-fbcb57aa0f1c?project=492294811440.\n"}}
+[debug] [2024-11-13T19:04:28.192Z] Got source token undefined for region us-central1
+[error] Build failed with status: FAILURE. Could not build the function due to a missing permission on the build service account. If you didn't revoke that permission explicitly, this could be caused by a change in the organization policies. Please refer to the following documentation for more details and resolution: https://cloud.google.com/functions/docs/troubleshooting#build-service-account
+ You can also view the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/6e49639a-7bc7-4a2a-83f4-fbcb57aa0f1c?project=492294811440.
+
+[debug] [2024-11-13T19:04:28.209Z] Total Function Deployment time: 27221
+[debug] [2024-11-13T19:04:28.209Z] 1 Functions Deployed
+[debug] [2024-11-13T19:04:28.209Z] 1 Functions Errored
+[debug] [2024-11-13T19:04:28.209Z] 0 Function Deployments Aborted
+[debug] [2024-11-13T19:04:28.209Z] Average Function Deployment time: 27220
+[info] 
+[info] Functions deploy had errors with the following functions:
+	sendLeaseStatusEmail(us-central1)
+[info] i  functions: cleaning up build files... 
+[debug] [2024-11-13T19:04:28.340Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:04:28.341Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:04:28.343Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:04:28.343Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:04:28.343Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/subliva-d49ad/locations/us-central1/repositories/gcf-artifacts/packages/send_lease_status_email [none]
+[debug] [2024-11-13T19:04:28.345Z] >>> [apiv2][query] GET https://us.gcr.io/v2/subliva-d49ad/gcf/us-central1/tags/list [none]
+[debug] [2024-11-13T19:04:28.579Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/subliva-d49ad/locations/us-central1/repositories/gcf-artifacts/packages/send_lease_status_email 404
+[debug] [2024-11-13T19:04:28.579Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/subliva-d49ad/locations/us-central1/repositories/gcf-artifacts/packages/send_lease_status_email {"error":{"code":404,"message":"Package \"projects/subliva-d49ad/locations/us-central1/repositories/gcf-artifacts/packages/send_lease_status_email\" was not found.","status":"NOT_FOUND"}}
+[debug] [2024-11-13T19:04:28.762Z] <<< [apiv2][status] GET https://us.gcr.io/v2/subliva-d49ad/gcf/us-central1/tags/list 404
+[debug] [2024-11-13T19:04:28.763Z] <<< [apiv2][body] GET https://us.gcr.io/v2/subliva-d49ad/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-11-13T19:04:28.763Z] Failed docker command with error  Request to https://us.gcr.io/v2/subliva-d49ad/gcf/us-central1/tags/list had HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"Request to https://us.gcr.io/v2/subliva-d49ad/gcf/us-central1/tags/list had HTTP Error: 404, Not Found","status":404}
+[debug] [2024-11-13T19:04:28.764Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:04:28.764Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:04:28.764Z] >>> [apiv2][query] GET https://us.gcr.io/v2/subliva-d49ad/gcf/us-central1/tags/list [none]
+[debug] [2024-11-13T19:04:29.041Z] <<< [apiv2][status] GET https://us.gcr.io/v2/subliva-d49ad/gcf/us-central1/tags/list 404
+[debug] [2024-11-13T19:04:29.041Z] <<< [apiv2][body] GET https://us.gcr.io/v2/subliva-d49ad/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-11-13T19:04:29.041Z] Failed docker command with error  Request to https://us.gcr.io/v2/subliva-d49ad/gcf/us-central1/tags/list had HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"Request to https://us.gcr.io/v2/subliva-d49ad/gcf/us-central1/tags/list had HTTP Error: 404, Not Found","status":404}
+[debug] [2024-11-13T19:04:29.141Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:04:29.142Z] Checked if tokens are valid: true, expires at: 1731527928293
+[debug] [2024-11-13T19:04:29.142Z] >>> [apiv2][query] GET https://us.gcr.io/v2/subliva-d49ad/gcf/us-central1/tags/list [none]
+[debug] [2024-11-13T19:04:29.399Z] <<< [apiv2][status] GET https://us.gcr.io/v2/subliva-d49ad/gcf/us-central1/tags/list 404
+[debug] [2024-11-13T19:04:29.399Z] <<< [apiv2][body] GET https://us.gcr.io/v2/subliva-d49ad/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-11-13T19:04:29.399Z] Failed docker command with error  Request to https://us.gcr.io/v2/subliva-d49ad/gcf/us-central1/tags/list had HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"Request to https://us.gcr.io/v2/subliva-d49ad/gcf/us-central1/tags/list had HTTP Error: 404, Not Found","status":404}
+[warn] !  functions: Unhandled error cleaning up build images. This could result in a small monthly bill if not corrected. You can attempt to delete these images by redeploying or you can delete them manually at https://console.cloud.google.com/gcr/images/subliva-d49ad/us/gcf 
+[debug] [2024-11-13T19:04:29.401Z] Functions deploy failed.
+[debug] [2024-11-13T19:04:29.401Z] {
+  "endpoint": {
+    "id": "sendLeaseStatusEmail",
+    "project": "subliva-d49ad",
+    "region": "us-central1",
+    "entryPoint": "sendLeaseStatusEmail",
+    "platform": "gcfv2",
+    "runtime": "nodejs18",
+    "callableTrigger": {},
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "serviceAccount": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "concurrency": 80,
+    "vpc": null,
+    "environmentVariables": {
+      "FIREBASE_CONFIG": "{\"projectId\":\"subliva-d49ad\",\"storageBucket\":\"subliva-d49ad.firebasestorage.app\"}",
+      "GCLOUD_PROJECT": "subliva-d49ad",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/subliva-d49ad/locations/us-central1/services/sendLeaseStatusEmail"
+    },
+    "codebase": "default",
+    "cpu": 1,
+    "targetedByOnly": false,
+    "hash": "e0910259ae7a9f96c34e2dbdd804bca45db554c0"
+  },
+  "op": "create",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "exit": 1,
+    "message": "Build failed with status: FAILURE. Could not build the function due to a missing permission on the build service account. If you didn't revoke that permission explicitly, this could be caused by a change in the organization policies. Please refer to the following documentation for more details and resolution: https://cloud.google.com/functions/docs/troubleshooting#build-service-account\n You can also view the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/6e49639a-7bc7-4a2a-83f4-fbcb57aa0f1c?project=492294811440.\n",
+    "original": {
+      "code": 3,
+      "message": "Build failed with status: FAILURE. Could not build the function due to a missing permission on the build service account. If you didn't revoke that permission explicitly, this could be caused by a change in the organization policies. Please refer to the following documentation for more details and resolution: https://cloud.google.com/functions/docs/troubleshooting#build-service-account\n You can also view the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/6e49639a-7bc7-4a2a-83f4-fbcb57aa0f1c?project=492294811440.\n"
+    },
+    "status": 3,
+    "code": 3
+  }
+}
+[debug] [2024-11-13T19:04:29.469Z] Error: Failed to create function sendLeaseStatusEmail in region us-central1
+    at C:\Users\suley\AppData\Roaming\nvm\v18.20.4\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:294:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Fabricator.createV2Function (C:\Users\suley\AppData\Roaming\nvm\v18.20.4\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:278:30)
+    at async Fabricator.createEndpoint (C:\Users\suley\AppData\Roaming\nvm\v18.20.4\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:137:13)
+    at async handle (C:\Users\suley\AppData\Roaming\nvm\v18.20.4\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:89:17)
+[error] 
+[error] Error: There was an error deploying functions

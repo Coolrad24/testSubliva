@@ -1,0 +1,73 @@
+.contract-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .contract-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .contract-section {
+    margin-bottom: 20px;
+  }
+  
+  .contract-section h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .contract-section p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  
+  ul {
+    padding-left: 20px;
+  }
+  
+  ul li {
+    margin-bottom: 5px;
+  }
+  
+  .signatures {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  
+  .signature-block {
+    width: 45%;
+  }
+  
+  .signature-block input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .sign-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sign-button:hover {
+    background-color: #0056b3;
+  }
+  

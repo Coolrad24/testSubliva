@@ -1,0 +1,140 @@
+.dashboard-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: auto;
+}
+
+.dashboard-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contracts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contract-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  width: 100%;
+  max-height: 150px;
+  overflow: hidden;
+}
+
+.contract-card.owner-card {
+  border-left: 5px solid #4caf50; /* Green for owners */
+}
+
+.property-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 35%;
+}
+
+.property-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  object-fit: cover;
+  margin-bottom: 5px;
+}
+
+.property-details h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.property-details p {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0 0;
+}
+
+.contract-info {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.contract-info h4 {
+  font-size: 16px;
+  margin: 0 0 5px;
+}
+
+.contract-info p {
+  font-size: 14px;
+  margin: 3px 0;
+}
+
+.owner-actions,
+.buyer-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.owner-actions p,
+.buyer-actions p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.terminate-button {
+  background-color: #f44336;
+}
+
+.terminate-button:hover {
+  background-color: #c62828;
+}
+
+.forgo-button {
+  background-color: #ffa000;
+}
+
+.forgo-button:hover {
+  background-color: #ff8f00;
+}
+
+.payment-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.payment-modal h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  text-align: center;
+}

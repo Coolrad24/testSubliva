@@ -1,0 +1,60 @@
+{
+  "name": "subliva",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.0",
+    "@stripe/react-stripe-js": "^3.0.0",
+    "@stripe/stripe-js": "^5.2.0",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.7.7",
+    "body-parser": "^1.20.3",
+    "browser-image-compression": "^2.0.2",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "firebase": "^9.23.0",
+    "jspdf": "^2.5.2",
+    "mongoose": "^8.7.2",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.16",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.27.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "functions": {
+    "source": "functions"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15"
+  }
+}

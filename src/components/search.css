@@ -1,0 +1,152 @@
+/* Main container styling */
+.search-results-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f6f7f8;
+  font-family: Arial, sans-serif;
+}
+
+/* Filters at the top */
+.filter-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.filter-form input,
+.filter-form select {
+  padding: 8px 12px;
+  margin-right: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.filter-form button {
+  background-color: #02253b;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.filter-form button:hover {
+  background-color: #ffca2c;
+}
+
+/* Main content layout */
+.results-container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+/* Property list section */
+.property-listing {
+  flex: 1.5;
+  overflow-y: auto;
+  background-color: #fff;
+  padding: 16px;
+  border-right: 1px solid #d4d4d4;
+}
+
+.property-listing h1 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.property-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #d4d4d4;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.property-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+.property-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.property-card .property-content {
+  padding: 12px;
+}
+
+.property-card h2 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.property-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Google Maps Section */
+.map-container {
+  flex: 1;
+  height: 100%;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px 0;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  margin: 0 4px;
+  background-color: #0078ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background-color: #005bb5;
+}
+
+.pagination button:disabled {
+  background-color: #d4d4d4;
+  cursor: not-allowed;
+}
+/* Filter Form Adjustments */
+.filter-form {
+  margin-top: 80px; /* Push down the filters below the navbar */
+  z-index: 900; /* Keep it below the navbar but above other content */
+  position: relative; /* Ensure it respects the margin */
+}
+
+/* Add space below the navbar in case of fixed layout */
+.search-results-container {
+  margin-top: 64px; /* Match this with the navbar height */
+}

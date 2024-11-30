@@ -1,0 +1,142 @@
+/* Container for Saved Properties */
+.saved-properties-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9fafb; /* Light gray background */
+    min-height: 100vh;
+  }
+  
+  /* Title Styling */
+  h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  /* Grid Layout for Properties */
+  .saved-properties-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Property Card Styling */
+  .property-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 12px; /* Rounder corners for a modern look */
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+    position: relative;
+  }
+  
+  .property-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Enhanced hover shadow */
+    transform: translateY(-5px); /* Lift effect on hover */
+  }
+  
+  /* Property Link for Entire Card */
+  .property-link {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  /* Property Image Section */
+  .property-image {
+    width: 100%;
+    height: 180px; /* Consistent height for all images */
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .property-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images are properly cropped */
+  }
+  
+  /* Sold Banner (if applicable) */
+  .sold-banner {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #e53e3e; /* Red for sold banner */
+    color: white;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 0.875rem;
+    border-radius: 5px;
+    z-index: 10;
+  }
+  
+  /* Property Content Section */
+  .property-content {
+    padding: 15px;
+  }
+  
+  .property-content h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #1a202c; /* Dark gray for title */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Prevent long titles from breaking layout */
+  }
+  
+  .property-content p {
+    font-size: 0.9rem;
+    margin: 5px 0;
+    color: #718096; /* Subtle gray for details */
+  }
+  
+  /* Property Details */
+  .property-details {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .property-details li {
+    margin-right: 15px;
+    font-size: 0.875rem;
+    color: #4a5568; /* Medium gray for details */
+  }
+  
+  /* Price Section */
+  .property-price {
+    font-weight: bold;
+    color: #4caf50; /* Green for price text */
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .saved-properties-grid {
+      grid-template-columns: 1fr; /* Stack cards on smaller screens */
+    }
+  
+    .property-content h2 {
+      font-size: 1rem; /* Slightly smaller title on smaller screens */
+    }
+  }
+  
+  .loading {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #6b7280; /* Gray */
+    margin-top: 2rem;
+  }
+  
+  .error {
+    text-align: center;
+    font-size: 1rem;
+    color: #ef4444; /* Red */
+    margin-top: 2rem;
+  }
+  
